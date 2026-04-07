@@ -4,11 +4,11 @@
 Клонировать репозиторий и перейти в него в командной строке:
 
 ```
-git clone https://github.com/dkutuzovcloud/kittygram_dkutuzov_cats_events.git
+git clone https://github.com/dkutuzovcloud/kittygram_dkutuzov_cats_events_cats_events.git
 ```
 Переходим в директорию с проектом
 ```
-cd ~/kittygram/kittygram_dkutuzov
+cd ~/kittygram/kittygram_dkutuzov_cats_events
 ```
 Установка зависимостей
 ```
@@ -34,9 +34,9 @@ After=network.target
 [Service]
 User=root
 Group=www-data
-WorkingDirectory=/root/kittygram/kittygram_dkutuzov
-Environment="PATH=/root/kittygram/kittygram_dkutuzov/venv/bin"
-ExecStart=/root/kittygram/kittygram_dkutuzov/venv/bin/gunicorn \
+WorkingDirectory=/root/kittygram/kittygram_dkutuzov_cats_events
+Environment="PATH=/root/kittygram/kittygram_dkutuzov_cats_events_cats_eventsvenv/bin"
+ExecStart=/root/kittygram/kittygram_dkutuzov_cats_events_cats_eventsvenv/bin/gunicorn \
           --bind 0.0.0.0:8000 \
           kittygram.wsgi:application
 Restart=always
@@ -89,12 +89,12 @@ GET - curl http://localhost:8443/cats/
 ### 2. Как запустить проект через docker:
 
 ```
-git clone https://github.com/dkutuzovcloud/kittygram_dkutuzov_cats_events.git
+git clone https://github.com/dkutuzovcloud/kittygram_dkutuzov_cats_events_cats_events.git
 
 ```
 Переходим в директорию с проектом
 ```
-cd ~/kittygram/kittygram_dkutuzov
+cd ~/kittygram/kittygram_dkutuzov_cats_events
 ```
 Установка docker.io и docker compose
 ```
@@ -107,7 +107,7 @@ chmod +x $DOCKER_CONFIG/cli-plugins/docker-compose
 ```
 Редактирование .env
 ```
-DOCKER_IMAGE=dkutuzov/kittygram_dkutuzov:latest
+DOCKER_IMAGE=dkutuzov/kittygram_dkutuzov_cats_events:latest
 
 APP_PORT=8081 - - можно заменить на свой порт
 NGINX_PORT=8443 - можно заменить на свой порт
